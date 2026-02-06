@@ -40,15 +40,16 @@ The primary goals of Ushort are to:
 
 ## 🏗️ High-Level Architecture
 
-Frontend (React)
-↓
-REST APIs (Spring Boot)
-↓
-Service Layer (Business Logic)
-↓
-Repository Layer (JPA)
-↓
-MySQL Database
+Frontend (React)  
+&nbsp;&nbsp;↓  
+REST APIs (Spring Boot)  
+&nbsp;&nbsp;↓  
+Service Layer (Business Logic)  
+&nbsp;&nbsp;↓  
+Repository Layer (JPA)  
+&nbsp;&nbsp;↓  
+MySQL Database  
+
 
 
 ### Architectural Principles

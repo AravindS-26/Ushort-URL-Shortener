@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+
+:root {
+  /* Midnight Violet Palette - Light */
+  --color-primary: #7c3aed; /* Violet 600 */
+  --color-primary-dark: #6d28d9;
+  --color-accent: #0ea5e9; /* Sky 500 */
+  
+  --color-bg-main: #f8fafc;
+  --color-bg-header: rgba(255, 255, 255, 0.8);
+  --color-bg-footer: #f1f5f9;
+  --color-bg-card: #ffffff;
+  
+  --color-text-main: #0f172a;
+  --color-text-muted: #475569;
+  
+  --color-border: #e2e8f0;
+
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  
+  /* Layout */
+  --header-height: 4rem;
+  
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+.dark {
+  /* Midnight Violet Palette - Dark Tiered Hierarchy */
+  --color-bg-main: #020617; /* Deepest Base */
+  --color-bg-header: rgba(3, 7, 18, 0.8);
+  --color-bg-footer: #0f172a; /* Tertiary depth */
+  --color-bg-card: #1e293b; /* Elevated surface for cards */
+  
+  --color-text-main: #f8fafc;
+  --color-text-muted: #cbd5e1; /* Clearer muted text */
+  
+  --color-border: #334155; /* Higher contrast border for cards */
+
+  --hover-glow: 0 0 20px -5px var(--color-primary);
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-dark);
+  --color-accent: var(--color-accent);
+  --color-bg-main: var(--color-bg-main);
+  --color-bg-header: var(--color-bg-header);
+  --color-bg-footer: var(--color-bg-footer);
+  --color-bg-card: var(--color-bg-card);
+  --color-text-main: var(--color-text-main);
+  --color-text-muted: var(--color-text-muted);
+  --color-border: var(--color-border);
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 12px -1px rgb(0 0 0 / 0.1), 0 2px 6px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 25px -3px rgb(0 0 0 / 0.1), 0 4px 10px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 40px -5px rgb(0 0 0 / 0.15), 0 10px 20px -10px rgb(0 0 0 / 0.1);
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-0.5;
+}
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
